@@ -32,4 +32,5 @@
 #pixel-board {
   margin-top: 10px;
   width: 210px;
+  position: fixed;
 }

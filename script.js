@@ -1,9 +1,18 @@
+let numeroPixels = 5;
+
 function pixelSquare() {
-  for (let index = 0; index < 25; index++) {
-    let div = document.createElement("div")
-    div.className = "pixel"
-    let pixel = document.querySelector("#pixel-board")
-    pixel.appendChild(div)
+  const pixel = document.querySelector("#pixel-board")
+  for (let index = 0; index < numeroPixels; index += 1) {
+    const divLinha = document.createElement("div")
+    divLinha.className = "linha";
+    pixel.appendChild(divLinha)
+    for (let i = 0; i < numeroPixels; i += 1) {
+      const div = document.createElement("div")
+      div.className = "pixel"
+      divLinha.appendChild(div)
+    }
   }
 }
 pixelSquare();
+
+
