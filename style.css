@@ -1,19 +1,34 @@
-.color{
+.color {
     border: solid 1px black;
     height: 40px;
     width: 40px;
     display: inline-block;
 }
 
-#um{
-background-color: black;
+#um {
+    background-color: black;
 }
-#dois{
+
+#dois {
     background-color: yellow;
 }
-#tres{
+
+#tres {
     background-color: purple;
 }
-#quatro{
+
+#quatro {
     background-color: blue;
+}
+
+.pixel {
+    background-color: white;
+    border: solid 1px black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#pixel-board{
+    margin-top: 10px;
 }
