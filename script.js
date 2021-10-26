@@ -21,4 +21,5 @@ color.addEventListener('click', cor)
 }
 
 function cor () {
+  
 }
