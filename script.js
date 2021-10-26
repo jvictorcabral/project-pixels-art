@@ -15,11 +15,11 @@ function pixelSquare() {
 }
 pixelSquare();
 
-function selected () {
-let color = document.querySelector('.color')
-color.addEventListener('click', cor)
+function selected() {
+  const color = document.querySelector('.color')
+  color.addEventListener('click', cor)
 }
 
-function cor () {
-  
+function cor() {
+
 }
