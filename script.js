@@ -1,7 +1,8 @@
 const numeroPixels = 5;
+const pixel = document.querySelector('#pixel-board');
+const section = document.getElementById('color-palette');
 
 function pixelSquare() {
-  const pixel = document.querySelector('#pixel-board');
   for (let index = 0; index < numeroPixels; index += 1) {
     const divLinha = document.createElement('div');
     divLinha.className = 'linha';
@@ -15,12 +16,21 @@ function pixelSquare() {
 }
 pixelSquare();
 
-const section = document.getElementById('color-palette');
+let colors = 'black';
+
 function selected(event) {
-  const color = document.querySelector('.selected');
-  if (color) {
-    color.classList.remove('selected');
+  const color = document.querySelectorAll('.color');
+  for (i of color) {
+    i.classList.remove('selected');
   }
   event.target.classList.add('selected');
+  let test = getComputedStyle(event.target).backgroundColor; //Consegui com a ajuda do Matheus Guedes na mentoria
+  colors = test;
 }
 section.addEventListener('click', selected);
+
+const pixelBoard = document.querySelectorAll('.pixel');
+function paintPixel(event) {
+  event.target.style.backgroundColor = colors;
+}
+pixel.addEventListener('click', paintPixel);
