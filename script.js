@@ -17,10 +17,10 @@ pixelSquare();
 
 const section = document.getElementById('color-palette');
 function selected(event) {
-  const color = document.querySelector('.selected')
-if (color) {
-  color.classList.remove('selected')
+  const color = document.querySelector('.selected');
+  if (color) {
+    color.classList.remove('selected');
+  }
+  event.target.classList.add('selected');
 }
-  event.target.classList.add('selected')
-}
-section.addEventListener('click', selected)
+section.addEventListener('click', selected);
